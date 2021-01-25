@@ -4,16 +4,16 @@ An Open Source Account Generator Bot!
 
 
 How it works:
-Put your Discord Bot Token in Config,
-Make sure you have Node.js installed.
+Put your Discord Bot Token in Config,\n
+Make sure you have Node.js installed.\n\n
 
-You can add accounts in the /Accounts folder,
-For Help/Qeustions please join our Discord Server,
-Or add me on Discord!
+You can add accounts in the /Accounts folder,\n
+For Help/Qeustions please join our Discord Server,\n
+Or add me on Discord!\n\n
 
-Discord: Snikker#1337
-Server: https://discord.gg/sQXKeJKEza
+Discord: Snikker#1337\n
+Server: https://discord.gg/sQXKeJKEza\n\n\n
 
 
-Note: This is my first Discord Bot,
-I am new to Javascript and Discord.js!
+Note: This is my first Discord Bot,\n
+I am new to Javascript and Discord.js!\n
