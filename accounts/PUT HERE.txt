@@ -1,0 +1,7 @@
+Put Your Accounts in /LinkGen-Discord-Generator-Bot/accounts.
+
+Under the name of the services like:
+
+minecraft.txt
+spotify.txt
+netflix.txt 
