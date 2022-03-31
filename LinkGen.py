@@ -18,30 +18,17 @@ client = discord.Bot()
 # Check if correctly setup
 
 if os.path.exists("accounts"): pass
-else:os.mkdir("accounts")
-
+else: os.mkdir("accounts")
 if platform.system() == "Windows": os.system("cls")
 else: os.system("clear")
-
 try: json.loads(open("config.json", "r").read())
-except Exception:
-    print("[ERROR] Config File missing")
-    input()
-
+except Exception: print("[ERROR] Config File missing")
 try:json.loads(open("config.json", "r").read())["token"]
-except Exception:
-    print("[ERROR] Discord Token not set")
-    input()
-
+except Exception: print("[ERROR] Discord Token not set")
 try:json.loads(open("config.json", "r").read())["guild_id"]
-except Exception:
-    print("[ERROR] Guild ID not set")
-    input()
-
+except Exception: print("[ERROR] Guild ID not set")
 try:json.loads(open("config.json", "r").read())["log_channel"]
-except Exception:
-    print("[ERROR] Log Channel not set")
-    input()
+except Exception: print("[ERROR] Log Channel not set")
 
 # When bot is logged in
 
@@ -52,13 +39,9 @@ async def on_ready():
     print("LinkGen Ready", "\n")
     await client.change_presence(activity=discord.Game(name="LinkGen V2.0"))
     try: client.guilds[0].get_role(int(json.loads(open("config.json", "r").read())["gen_role"]))
-    except Exception:
-        print("[ERROR] Gen Role not set")
-        input()
+    except Exception: print("[ERROR] Gen Role not set")
     try: client.guilds[0].get_channel(int(json.loads(open("config.json", "r").read())["gen_channel"]))
-    except Exception:
-        print("[ERROR] Gen Channel not set")
-        input()
+    except Exception: print("[ERROR] Gen Channel not set")
     services = ["nordvpn", "hulu", "expressvpn", "nitro", "creditcard", "spotify", "netflix", "disney", "minecraft"]
     for service in services:
         if os.path.exists(f"accounts/{service}.txt"): pass
