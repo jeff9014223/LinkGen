@@ -14,6 +14,11 @@ except Exception:
 
 client = discord.Bot()
 
+if os.path.exists("logs"):
+    pass
+else:
+    os.mkdir("logs")
+
 if os.path.exists("accounts"):
     pass
 else:
@@ -90,6 +95,12 @@ async def generate(ctx, service_name):
                                 embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/773133136929226763/797204521997828106/777514274829893683.gif")
                                 user = await client.fetch_user(int(ctx.author.id))
                                 await user.send(embed=embed)
+                                open(f"logs/{service}.txt", "a").write(f"""
+
+                                Generated: {service} by: {ctx.author.name}
+                                Account: {data[0]}
+
+                                """)
                                 await ctx.respond("Account Generated, check your DM")
                             except Exception:
                                 await ctx.respond(f"We are currently out of {service}!", ephemeral=True)
@@ -114,6 +125,12 @@ async def generate(ctx, service_name):
                                 embed.set_footer(text="Made by Snikker#1337")
                                 user = await client.fetch_user(int(ctx.author.id))
                                 await user.send(embed=embed)
+                                open(f"logs/{service}.txt", "a").write(f"""
+
+                                Generated: {service} by: {ctx.author.name}
+                                Account: {data[0]}
+
+                                """)
                                 await ctx.respond("Account Generated, check your DM")
                             except Exception:
                                 await ctx.respond(f"We are currently out of {service}!", ephemeral=True)
