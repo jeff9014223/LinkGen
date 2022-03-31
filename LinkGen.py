@@ -1,10 +1,8 @@
 try:
     import json, os, platform, time, discord
 except Exception:
-    if platform.system() == "Windows":
-        os.system("cls")
-    else:
-        os.system("clear")
+    if platform.system() == "Windows": os.system("cls")
+    else: os.system("clear")
     print("LinkGen uses Pycord, Try to remove discord.py when installed")
     time.sleep(3)
     os.system("clear")
@@ -14,38 +12,30 @@ except Exception:
 
 client = discord.Bot()
 
-if os.path.exists("logs"):
-    pass
-else:
-    os.mkdir("logs")
+if os.path.exists("logs"): pass
+else: os.mkdir("logs")
+if os.path.exists("accounts"): pass
+else:os.mkdir("accounts")
 
-if os.path.exists("accounts"):
-    pass
-else:
-    os.mkdir("accounts")
+if platform.system() == "Windows": os.system("cls")
+else: os.system("clear")
 
-if platform.system() == "Windows":
-    os.system("cls")
-else:
-    os.system("clear")
-
-try:
-    json.loads(open("config.json", "r").read())
+try: json.loads(open("config.json", "r").read())
 except Exception:
     print("[ERROR] Config File missing")
     input()
-try:
-    json.loads(open("config.json", "r").read())["token"]
+
+try:json.loads(open("config.json", "r").read())["token"]
 except Exception:
     print("[ERROR] Discord Token not set")
     input()
-try:
-    json.loads(open("config.json", "r").read())["guild_id"]
+
+try:json.loads(open("config.json", "r").read())["guild_id"]
 except Exception:
     print("[ERROR] Guild ID not set")
     input()
-try:
-    json.loads(open("config.json", "r").read())["log_channel"]
+
+try:json.loads(open("config.json", "r").read())["log_channel"]
 except Exception:
     print("[ERROR] Log Channel not set")
     input()
@@ -126,4 +116,3 @@ async def stock(ctx):
     await ctx.respond(embed=embed)
 
 client.run(json.loads(open("config.json", "r").read())["token"])
-
