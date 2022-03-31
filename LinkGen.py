@@ -1,3 +1,5 @@
+# Imports
+
 try:
     import json, os, platform, time, discord
 except Exception:
@@ -12,6 +14,8 @@ except Exception:
     os._exit(0)
 
 client = discord.Bot()
+
+# Check if correctly setup
 
 if os.path.exists("accounts"): pass
 else:os.mkdir("accounts")
@@ -39,6 +43,8 @@ except Exception:
     print("[ERROR] Log Channel not set")
     input()
 
+# When bot is logged in
+
 @client.event
 async def on_ready():
     print(f"Logged in as: {client.user.name}")
@@ -59,6 +65,8 @@ async def on_ready():
         else:
             open(f"accounts/{service}.txt", "a").write(f"Paste {service} accounts here")
             print(f"[WARNING] No Accounts found for {service} - Creating file...")
+
+# Generate Command
 
 @client.slash_command(name="generate", guild_ids=[json.loads(open("config.json", "r").read())["guild_id"]])
 async def generate(ctx, service_name):
@@ -92,12 +100,16 @@ async def generate(ctx, service_name):
                 else:
                     await ctx.respond(f"You cannot gen {service}!", ephemeral=True)
 
+# Help Command
+
 @client.slash_command(name="help", guild_ids=[json.loads(open("config.json", "r").read())["guild_id"]])
 async def help(ctx):
     embed = discord.Embed(title="LinkGen help command", description="Usage: /generate <service name>, /stock", color=0x46a9f0)
     embed.add_field(name="All Services", value="``nordvpn``, ``hulu``, ``expressvpn``, ``nitro``, ``creditcard``, ``spotify``, ``netflix``, ``disney``, ``minecraft``")
     embed.set_footer(text="Made by Snikker#1337")
     await ctx.respond(embed=embed)
+
+# Stock Command
 
 @client.slash_command(name="stock", guild_ids=[json.loads(open("config.json", "r").read())["guild_id"]])
 async def stock(ctx):
