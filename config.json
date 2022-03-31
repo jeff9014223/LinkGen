@@ -1,7 +1,7 @@
 {
     "guild_id": "",
-    "token": "",
-    "free_role": "",
-    "premium_role": "",
-    "gen_channel": ""
+    "gen_role": "",
+    "gen_channel": "",
+    "log_channel": "",
+    "token": ""
 }
