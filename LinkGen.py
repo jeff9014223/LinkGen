@@ -5,7 +5,8 @@ except Exception:
     else: os.system("clear")
     print("LinkGen uses Pycord, Try to remove discord.py when installed")
     time.sleep(3)
-    os.system("clear")
+    if platform.system() == "Windows": os.system("cls")
+    else: os.system("clear")
     print("Pycord not found - Installing...\n")
     os.system("pip install py-cord==2.0.0b4")
     os._exit(0)
@@ -42,7 +43,7 @@ except Exception:
 async def on_ready():
     print(f"Logged in as: {client.user.name}")
     print(f"Using guild: {client.guilds[0].name}")
-    print("LinkGen Ready\n")
+    print("LinkGen Ready", "\n")
     await client.change_presence(activity=discord.Game(name="LinkGen V2.0"))
     try: client.guilds[0].get_role(int(json.loads(open("config.json", "r").read())["gen_role"]))
     except Exception:
