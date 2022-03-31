@@ -46,20 +46,17 @@ async def on_ready():
     print(f"Using guild: {client.guilds[0].name}")
     print("LinkGen Ready\n")
     await client.change_presence(activity=discord.Game(name="LinkGen V2.0"))
-    try:
-        client.guilds[0].get_role(int(json.loads(open("config.json", "r").read())["gen_role"]))
+    try: client.guilds[0].get_role(int(json.loads(open("config.json", "r").read())["gen_role"]))
     except Exception:
         print("[ERROR] Gen Role not set")
         input()
-    try:
-        client.guilds[0].get_channel(int(json.loads(open("config.json", "r").read())["gen_channel"]))
+    try: client.guilds[0].get_channel(int(json.loads(open("config.json", "r").read())["gen_channel"]))
     except Exception:
         print("[ERROR] Gen Channel not set")
         input()
     services = ["nordvpn", "hulu", "expressvpn", "nitro", "creditcard", "spotify", "netflix", "disney", "minecraft"]
     for service in services:
-        if os.path.exists(f"accounts/{service}.txt"):
-            pass
+        if os.path.exists(f"accounts/{service}.txt"): pass
         else:
             open(f"accounts/{service}.txt", "a").write(f"Paste {service} accounts here")
             print(f"[WARNING] No Accounts found for {service} - Creating file...")

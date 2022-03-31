@@ -6,6 +6,10 @@ An Open Source Account Generator Bot!
 /help \
 /stock (automatic)
 
+Log Channel
+Generator Channel
+Generator Role
+
 # How it works:
 Put your Discord Bot Token in config.json \
 Create a Free Gen role and a Premium Gen role \
