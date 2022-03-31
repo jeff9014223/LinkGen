@@ -12,8 +12,6 @@ except Exception:
 
 client = discord.Bot()
 
-if os.path.exists("logs"): pass
-else: os.mkdir("logs")
 if os.path.exists("accounts"): pass
 else:os.mkdir("accounts")
 
