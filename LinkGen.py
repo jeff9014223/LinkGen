@@ -60,8 +60,8 @@ async def generate(ctx, service_name):
         for service in services:
             if service_name.lower() == service.lower():
                 if str(json.loads(open("config.json", "r").read())["gen_role"]) in str(ctx.author.roles):
-                    if os.path.exists(f"accounts/{service}.txt"):
-                        with open(f"accounts/{service}.txt", "r+") as accounts:
+                    if os.path.exists(f"accounts/{service.lower()}.txt"):
+                        with open(f"accounts/{service.lower()}.txt", "r+") as accounts:
                             data = accounts.readlines()
                             accounts.seek(0)
                             accounts.truncate()
@@ -107,3 +107,4 @@ async def stock(ctx):
     await ctx.respond(embed=embed)
 
 client.run(json.loads(open("config.json", "r").read())["token"])
+
