@@ -12,7 +12,10 @@ Generator Role
 
 # Installation:
 LinkGen will install Pycord automaticly, make sure you deleted discord.py if installed \
-Accounts folder and files will be created automaticly.
+Accounts folder and files will be created automaticly. \
+
+You need to invite the bot with applications.commands in the url generator from developer portal, \
+Or the slash commands does not work! \
 
 Put your config in the config.json and start the bot with python LinkGen.py
 
