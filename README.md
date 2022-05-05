@@ -17,7 +17,7 @@ Accounts folder and files will be created automaticly.
 You need to invite the bot with applications.commands in the url generator from developer portal, \
 Or the slash commands does not work! 
 
-Put your config in the config.json and start the bot with python LinkGen.py
+Put your config in the config.json and start the bot with `python LinkGen.py`
 
 # How it works:
 Put your Discord Bot Token in config.json \
