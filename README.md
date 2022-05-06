@@ -1,4 +1,4 @@
-# LinkGen Account Generator
+# LinkGen Account Generator v2
 An Open Source Account Generator Bot!
 
 # Features:
