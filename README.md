@@ -25,6 +25,10 @@ Create a Free Gen role and a Premium Gen role \
 Create a Generate Channel \
 Make sure you have Python 3.9 installed 
 
-You can add accounts in the /accounts folder, for help add me on Discord!
+You can add accounts in the /accounts folder
 
-Discord: Snikker#1337
+If you have any problems please join my server and create a ticket!
+
+Support Server: ``https://discord.gg/gfmmBQB4tR``
+
+
