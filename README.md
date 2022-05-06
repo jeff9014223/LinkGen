@@ -27,7 +27,7 @@ Make sure you have Python 3.9 installed
 
 You can add accounts in the /accounts folder
 
-If you have any problems please join my server and create a ticket!
+If you have any problems or suggestions please join my server and create a ticket!
 
 Support Server: ``https://discord.gg/gfmmBQB4tR``
 
