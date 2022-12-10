@@ -1,6 +1,6 @@
 # LinkGen Account Generator v1
 
-Version 2 soon \
+Version 2 is comming soon \
 An Open Source Account Generator Bot!
 
 # Features:
