@@ -1,36 +1,29 @@
 # LinkGen Account Generator v1
 
-Version 2 is coming soon \
-An Open Source Account Generator Bot!
+Version 2 is coming soon. This is an open source account generator bot.
 
-# Features:
-/generate \
-/help \
-/stock (automatic)
+## Features
+- `/generate` command
+- `/help` command
+- Automatic `/stock` command
+- Log channel
+- Generator channel
+- Generator role
 
-Log Channel
-Generator Channel
-Generator Role
+## Installation
+1. Delete `discord.py` if it is installed.
+2. LinkGen will install `Pycord` automatically.
+3. Accounts folder and files will be created automatically.
+4. Put your configuration in `config.json`.
+5. Start the bot with `python LinkGen.py`.
 
-# Installation:
-LinkGen will install Pycord automaticly, make sure you deleted discord.py if installed \
-Accounts folder and files will be created automaticly. 
+Make sure to invite the bot with `applications.commands` enabled in the URL generator from the developer portal. Otherwise, the slash commands will not work.
 
-You need to invite the bot with applications.commands in the url generator from developer portal, \
-Or the slash commands does not work! 
+## How it works
+1. Put your Discord bot token in `config.json`.
+2. Create a `Free Gen` role and a `Premium Gen` role.
+3. Create a generator channel.
+4. Make sure you have Python 3.9 installed.
+5. Add accounts to the `/accounts` folder.
 
-Put your config in the config.json and start the bot with `python LinkGen.py`
-
-# How it works:
-Put your Discord Bot Token in config.json \
-Create a Free Gen role and a Premium Gen role \
-Create a Generate Channel \
-Make sure you have Python 3.9 installed 
-
-You can add accounts in the /accounts folder
-
-If you have any problems or suggestions please join my server and create a ticket!
-
-Support Server: ``https://discord.gg/gfmmBQB4tR``
-
-
+If you have any problems or suggestions, please join my support server and create a ticket: https://discord.gg/gfmmBQB4tR.
