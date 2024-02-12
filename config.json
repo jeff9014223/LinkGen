@@ -1,7 +1,7 @@
 {
-    "guild_id": "",
-    "gen_role": "",
-    "gen_channel": "",
-    "log_channel": "",
-    "token": ""
+    "guild_id": "your_guild_id_here",
+    "gen_role": "your_role_id_here",
+    "gen_channel": "your_channel_id_here",
+    "log_channel": "your_log_channel_id_here",
+    "token": "your_bot_token_here"
 }

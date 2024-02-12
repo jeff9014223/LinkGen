@@ -1,20 +1,44 @@
 # Imports
 
 try:
-    import json, os, platform, time, discord
-except Exception:
-    if platform.system() == "Windows": os.system("cls")
-    else: os.system("clear")
-    print("LinkGen uses Pycord, Try to remove discord.py when installed")
-    time.sleep(3)
-    if platform.system() == "Windows": os.system("cls")
-    else: os.system("clear")
-    print("Pycord not found - Installing...\n")
-    os.system("pip install py-cord==2.0.0b4")
-    os._exit(0)
+    import json, os, platform, time, discord, subprocess
+except ModuleNotFoundError as e:
+    module_name = str(e).split("'")[1]
+    print(f"ModuleNotFound: {e} has not been found")
+    if module_name == "discord":
+        match input("Do you want to install it? (y/n)"):
+            case 'y':
+                os.system("pip install py-cord==2.0.0b4");subprocess.run(["python", __file__])
+            case 'n':
+                print("Ok, closing now")
+                time.sleep(0.4);exit()
+            case _:
+                print("Invalid input! Closing..")
+                time.sleep(0.4);exit()
+    match input("Do you want to install it? (y/n)"):
+        case 'y':
+            os.system(f'pip install {module_name}');subprocess.run(["python", __file__])
+        case 'n':
+            print("Ok, closing now")
+            time.sleep(0.4)
+        case _:
+            print("Invalid input! Closing..")
+            time.sleep(0.4)
 
-client = discord.Bot()
-
+try:
+    client = discord.Bot()
+except Exception as e:
+    os.system('cls' if os.name == "nt" else 'clear')
+    print(f"An error occured: {e} \nLinkGen uses Pycord, Try to remove discord.py when installed")
+    time.sleep(1.5);os.system('cls' if os.name == "nt" else 'clear')
+    match input("Do you want to install pycord? (y/n)"):
+        case 'y':
+            os.system("pip uninstall discord");os.system("pip uninstall discord.py");os.system("pip uninstall discord.py-self")
+            os.system("pip install py-cord==2.0.0b4");subprocess.run(["python", __file__])
+        case 'n':
+            print("ok, goodbye");time.sleep(0.3)
+        case _:
+            input("Invalid Input! Press enter to close")
 # Check if correctly setup
 
 if os.path.exists("accounts"): pass
